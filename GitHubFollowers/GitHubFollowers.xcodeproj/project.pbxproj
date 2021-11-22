@@ -15,6 +15,7 @@
 		AC91BF67274B0A3200C537A0 /* FavoritesListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC91BF66274B0A3200C537A0 /* FavoritesListVC.swift */; };
 		AC91BF69274B13CC00C537A0 /* GFButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC91BF68274B13CC00C537A0 /* GFButton.swift */; };
 		AC91BF6B274B186A00C537A0 /* GFTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC91BF6A274B186A00C537A0 /* GFTextField.swift */; };
+		AC91BF6E274B30F700C537A0 /* FollowerListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC91BF6D274B30F700C537A0 /* FollowerListVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		AC91BF66274B0A3200C537A0 /* FavoritesListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesListVC.swift; sourceTree = "<group>"; };
 		AC91BF68274B13CC00C537A0 /* GFButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFButton.swift; sourceTree = "<group>"; };
 		AC91BF6A274B186A00C537A0 /* GFTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFTextField.swift; sourceTree = "<group>"; };
+		AC91BF6D274B30F700C537A0 /* FollowerListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowerListVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				AC91BF5C274B06CC00C537A0 /* Models */,
 				AC91BF5D274B06D400C537A0 /* Views */,
 				AC91BF5E274B06DE00C537A0 /* Controllers */,
+				AC91BF6C274B2FBF00C537A0 /* Helpers and Extensions */,
 				AC91BF5B274B063F00C537A0 /* Resources */,
 			);
 			path = GitHubFollowers;
@@ -110,6 +113,7 @@
 			isa = PBXGroup;
 			children = (
 				AC91BF64274B0A1000C537A0 /* SearchVC.swift */,
+				AC91BF6D274B30F700C537A0 /* FollowerListVC.swift */,
 				AC91BF66274B0A3200C537A0 /* FavoritesListVC.swift */,
 			);
 			path = "View Controllers";
@@ -143,6 +147,13 @@
 				AC91BF6A274B186A00C537A0 /* GFTextField.swift */,
 			);
 			path = TextFields;
+			sourceTree = "<group>";
+		};
+		AC91BF6C274B2FBF00C537A0 /* Helpers and Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Helpers and Extensions";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -219,6 +230,7 @@
 				AC91BF67274B0A3200C537A0 /* FavoritesListVC.swift in Sources */,
 				AC91BF69274B13CC00C537A0 /* GFButton.swift in Sources */,
 				AC91BF65274B0A1000C537A0 /* SearchVC.swift in Sources */,
+				AC91BF6E274B30F700C537A0 /* FollowerListVC.swift in Sources */,
 				AC91BF48274B063100C537A0 /* AppDelegate.swift in Sources */,
 				AC91BF4A274B063100C537A0 /* SceneDelegate.swift in Sources */,
 			);
