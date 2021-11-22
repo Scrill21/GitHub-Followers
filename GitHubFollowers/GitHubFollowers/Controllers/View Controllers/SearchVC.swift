@@ -25,13 +25,22 @@ class SearchVC: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        navigationController?.isNavigationBarHidden = false
+        navigationController?.isNavigationBarHidden = true
     }
     
     //MARK: - Methods
     func createDismissKeyboardTapGesture() {
         let tap = UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing))
         view.addGestureRecognizer(tap)
+    }
+    
+    @objc func pushFollowListVC() {
+        let followerListVC = FollowerListVC()
+        guard let username = usernameTextField.text, !username.isEmpty else { return }
+        followerListVC.username = username
+        followerListVC.title = username
+        
+        navigationController?.pushViewController(followerListVC, animated: true)
     }
     
     func configureLogoImageView() {
@@ -49,6 +58,7 @@ class SearchVC: UIViewController {
     
     func configureTextField() {
         view.addSubview(usernameTextField)
+        usernameTextField.delegate = self
         
         NSLayoutConstraint.activate([
             usernameTextField.topAnchor.constraint(equalTo: logoImageView.bottomAnchor, constant: 48),
@@ -60,6 +70,7 @@ class SearchVC: UIViewController {
     
     func configureCallToActionButton() {
         view.addSubview(callToActionButton)
+        callToActionButton.addTarget(self, action: #selector(pushFollowListVC), for: .touchUpInside)
         
         NSLayoutConstraint.activate([
             callToActionButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -50),
@@ -69,3 +80,10 @@ class SearchVC: UIViewController {
         ])
     }
 }//End of class
+
+extension SearchVC: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        pushFollowListVC()
+        return true
+    }
+}//End of extension
