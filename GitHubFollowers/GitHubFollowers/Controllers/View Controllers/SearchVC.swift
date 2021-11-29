@@ -35,14 +35,18 @@ class SearchVC: UIViewController {
     }
     
     @objc func pushFollowListVC() {
+        guard let username = usernameTextField.text, !username.isEmpty else {
+            return
+        }
+        
         let followerListVC = FollowerListVC()
-        guard let username = usernameTextField.text, !username.isEmpty else { return }
         followerListVC.username = username
         followerListVC.title = username
         
         navigationController?.pushViewController(followerListVC, animated: true)
     }
     
+    //MARK: - UI Configurations
     func configureLogoImageView() {
         view.addSubview(logoImageView)
         logoImageView.translatesAutoresizingMaskIntoConstraints = false
