@@ -8,7 +8,8 @@
 import UIKit
 
 class GFButton: UIButton {
-
+    
+    //MARK: - Lifecycles
     override init(frame: CGRect) {
         super.init(frame: frame)
         configure()
