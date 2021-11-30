@@ -36,6 +36,8 @@ class SearchVC: UIViewController {
     
     @objc func pushFollowListVC() {
         guard let username = usernameTextField.text, !username.isEmpty else {
+            //Cmd + Ctrl + Spacebar is how to select emoji to enter
+            presentGFAlertOnMainThread(title: "Empty Username", message: "Please enter a username. We need to know who to look for 😀.", buttonTitle: "Ok")
             return
         }
         
