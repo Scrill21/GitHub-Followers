@@ -61,6 +61,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AC10738D276FFA1B001B527A /* Alerts */ = {
+			isa = PBXGroup;
+			children = (
+				AC4A46F92754609700F5A65F /* GFAlertVC.swift */,
+			);
+			path = Alerts;
+			sourceTree = "<group>";
+		};
 		AC4A46FB2754617400F5A65F /* Labels */ = {
 			isa = PBXGroup;
 			children = (
@@ -139,6 +147,7 @@
 			isa = PBXGroup;
 			children = (
 				AC91BF61274B070500C537A0 /* Custom Views */,
+				AC10738D276FFA1B001B527A /* Alerts */,
 				AC91BF62274B070D00C537A0 /* Buttons */,
 				AC4A46FB2754617400F5A65F /* Labels */,
 				AC91BF63274B071800C537A0 /* TextFields */,
@@ -161,7 +170,6 @@
 				AC91BF64274B0A1000C537A0 /* SearchVC.swift */,
 				AC91BF6D274B30F700C537A0 /* FollowerListVC.swift */,
 				AC91BF66274B0A3200C537A0 /* FavoritesListVC.swift */,
-				AC4A46F92754609700F5A65F /* GFAlertVC.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
