@@ -16,12 +16,12 @@ enum GFError: LocalizedError {
     var errorDescription: String? {
         switch self {
         case .invalidURL:
-            return "Unable to reach server"
+            return "This username created an invalid request. Please try again."
         case .thrownError(let error):
             print(error.localizedDescription)
-            return "That pokemon does not exist\nPlease check your spelling"
+            return "Unable to complete your request. Please check your internet connection"
         case .noData:
-            return "The server responded with no data."
+            return "The data received from the server was invalid. Please try again."
         case .unableToDecode:
             return "The server responded with bad data."
         }
