@@ -18,7 +18,7 @@ class NetworkManager {
     private init() {}
     
     func getFollower(for username: String, page: Int, completion: @escaping (Result<[Follower], GFError>) -> Void) {
-        let endpoint = baseURL + "/\(username)/followers?per_page=100&page=\(page)"
+        let endpoint = baseURL + "\(username)/followers?per_page=100&page=\(page)"
         
         guard let url = URL(string: endpoint) else {
             completion(.failure(.invalidURL))
@@ -37,7 +37,9 @@ class NetworkManager {
             guard let data = data else { return completion(.failure(.noData)) }
             
             do {
-                let follower = try JSONDecoder().decode([Follower].self, from: data)
+                let decoder = JSONDecoder()
+                decoder.keyDecodingStrategy = .convertFromSnakeCase
+                let follower = try decoder.decode([Follower].self, from: data)
                 completion(.success(follower))
             } catch {
                 completion(.failure(.unableToDecode))
