@@ -30,6 +30,4 @@ class GFAvatarImageView: UIImageView {
         translatesAutoresizingMaskIntoConstraints = false
     }
     
-    //MARK: - UI Configuration
-    
 }
