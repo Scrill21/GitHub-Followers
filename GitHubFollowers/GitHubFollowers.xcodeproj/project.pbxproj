@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		AC10739127700E0F001B527A /* FollowerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC10739027700E0F001B527A /* FollowerCell.swift */; };
 		AC107394277011FB001B527A /* GFAvatarImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC107393277011FB001B527A /* GFAvatarImageView.swift */; };
+		AC22C7CE2772C9C900A76687 /* UIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC22C7CD2772C9C900A76687 /* UIHelper.swift */; };
 		AC4A46FA2754609700F5A65F /* GFAlertVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4A46F92754609700F5A65F /* GFAlertVC.swift */; };
 		AC4A46FD275461A900F5A65F /* GFTitleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4A46FC275461A900F5A65F /* GFTitleLabel.swift */; };
 		AC4A46FF2754641700F5A65F /* GFBodyLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4A46FE2754641700F5A65F /* GFBodyLabel.swift */; };
@@ -32,6 +33,7 @@
 /* Begin PBXFileReference section */
 		AC10739027700E0F001B527A /* FollowerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowerCell.swift; sourceTree = "<group>"; };
 		AC107393277011FB001B527A /* GFAvatarImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFAvatarImageView.swift; sourceTree = "<group>"; };
+		AC22C7CD2772C9C900A76687 /* UIHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIHelper.swift; sourceTree = "<group>"; };
 		AC4A46F92754609700F5A65F /* GFAlertVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFAlertVC.swift; sourceTree = "<group>"; };
 		AC4A46FC275461A900F5A65F /* GFTitleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFTitleLabel.swift; sourceTree = "<group>"; };
 		AC4A46FE2754641700F5A65F /* GFBodyLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFBodyLabel.swift; sourceTree = "<group>"; };
@@ -118,6 +120,7 @@
 			isa = PBXGroup;
 			children = (
 				AC685873275C706400025CF8 /* GFError.swift */,
+				AC22C7CD2772C9C900A76687 /* UIHelper.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -330,6 +333,7 @@
 				AC4A47012754AC0200F5A65F /* GFContainerView.swift in Sources */,
 				AC91BF48274B063100C537A0 /* AppDelegate.swift in Sources */,
 				ACD0903B275734F800409740 /* NetworkManager.swift in Sources */,
+				AC22C7CE2772C9C900A76687 /* UIHelper.swift in Sources */,
 				AC91BF4A274B063100C537A0 /* SceneDelegate.swift in Sources */,
 				AC4A46FF2754641700F5A65F /* GFBodyLabel.swift in Sources */,
 				AC685874275C706400025CF8 /* GFError.swift in Sources */,
