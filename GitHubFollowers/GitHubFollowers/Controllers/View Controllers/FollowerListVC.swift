@@ -51,9 +51,11 @@ class FollowerListVC: UIViewController {
     }
     
     func getFollowers(username: String, page: Int) {
+        showLoadingView()
         NetworkManager.shared.getFollower(for: username, page: page) { [weak self] result in
+//            #warning("Call Dismiss") helpful way to remember reminders
             guard let self = self else { return }
-            
+            self.dismissLoadingView()
             switch result {
             case .success(let followers):
                 if followers.count < 100 { self.hasMoreFollowers = false }
