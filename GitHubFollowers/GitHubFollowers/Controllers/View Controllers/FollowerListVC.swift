@@ -37,19 +37,6 @@ class FollowerListVC: UIViewController {
     }
     
     //MARK: - Methods
-    func configureViewController() {
-        view.backgroundColor = .systemBackground
-        navigationController?.navigationBar.prefersLargeTitles = true
-    }
-    
-    func configureCollectionView() {
-        collectionView = UICollectionView(frame: view.bounds, collectionViewLayout: UIHelper.createThreeColumnFlowLayout(in: view))
-        view.addSubview(collectionView)
-        collectionView.delegate = self
-        collectionView.backgroundColor = .systemBackground
-        collectionView.register(FollowerCell.self, forCellWithReuseIdentifier: FollowerCell.reuseID)
-    }
-    
     func getFollowers(username: String, page: Int) {
         showLoadingView()
         NetworkManager.shared.getFollower(for: username, page: page) { [weak self] result in
@@ -74,6 +61,27 @@ class FollowerListVC: UIViewController {
         }
     }
     
+    func updateData() {
+        var snapshot = NSDiffableDataSourceSnapshot<Section, Follower>()
+        snapshot.appendSections([.main])
+        snapshot.appendItems(followers)
+        DispatchQueue.main.async { self.dataSource.apply(snapshot, animatingDifferences: true) }
+    }
+    
+    //MARK: - UI Configuration
+    func configureViewController() {
+        view.backgroundColor = .systemBackground
+        navigationController?.navigationBar.prefersLargeTitles = true
+    }
+    
+    func configureCollectionView() {
+        collectionView = UICollectionView(frame: view.bounds, collectionViewLayout: UIHelper.createThreeColumnFlowLayout(in: view))
+        view.addSubview(collectionView)
+        collectionView.delegate = self
+        collectionView.backgroundColor = .systemBackground
+        collectionView.register(FollowerCell.self, forCellWithReuseIdentifier: FollowerCell.reuseID)
+    }
+    
     func configureDataSource() {
         dataSource = UICollectionViewDiffableDataSource<Section, Follower>(collectionView: collectionView, cellProvider: { (collectionView, indexPath, follower) -> UICollectionViewCell? in
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: FollowerCell.reuseID, for: indexPath) as? FollowerCell
@@ -84,12 +92,7 @@ class FollowerListVC: UIViewController {
         })
     }
     
-    func updateData() {
-        var snapshot = NSDiffableDataSourceSnapshot<Section, Follower>()
-        snapshot.appendSections([.main])
-        snapshot.appendItems(followers)
-        DispatchQueue.main.async { self.dataSource.apply(snapshot, animatingDifferences: true) }
-    }
+    
 }//End of class
 
 //MARK: - Extensions
