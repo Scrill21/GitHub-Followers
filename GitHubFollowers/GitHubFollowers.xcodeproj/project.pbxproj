@@ -16,6 +16,7 @@
 		AC22C7D82781187E00A76687 /* GFSecondaryTitleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC22C7D72781187E00A76687 /* GFSecondaryTitleLabel.swift */; };
 		AC22C7DA2781292C00A76687 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC22C7D92781292C00A76687 /* Constants.swift */; };
 		AC22C7DC2784081700A76687 /* GFItemInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC22C7DB2784081700A76687 /* GFItemInfoView.swift */; };
+		AC22C7DE2784234100A76687 /* GFItemInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC22C7DD2784234100A76687 /* GFItemInfoVC.swift */; };
 		AC4A46FA2754609700F5A65F /* GFAlertVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4A46F92754609700F5A65F /* GFAlertVC.swift */; };
 		AC4A46FD275461A900F5A65F /* GFTitleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4A46FC275461A900F5A65F /* GFTitleLabel.swift */; };
 		AC4A46FF2754641700F5A65F /* GFBodyLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4A46FE2754641700F5A65F /* GFBodyLabel.swift */; };
@@ -46,6 +47,7 @@
 		AC22C7D72781187E00A76687 /* GFSecondaryTitleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFSecondaryTitleLabel.swift; sourceTree = "<group>"; };
 		AC22C7D92781292C00A76687 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		AC22C7DB2784081700A76687 /* GFItemInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFItemInfoView.swift; sourceTree = "<group>"; };
+		AC22C7DD2784234100A76687 /* GFItemInfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFItemInfoVC.swift; sourceTree = "<group>"; };
 		AC4A46F92754609700F5A65F /* GFAlertVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFAlertVC.swift; sourceTree = "<group>"; };
 		AC4A46FC275461A900F5A65F /* GFTitleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFTitleLabel.swift; sourceTree = "<group>"; };
 		AC4A46FE2754641700F5A65F /* GFBodyLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFBodyLabel.swift; sourceTree = "<group>"; };
@@ -110,15 +112,6 @@
 				AC22C7DB2784081700A76687 /* GFItemInfoView.swift */,
 			);
 			path = Views;
-			sourceTree = "<group>";
-		};
-		AC22C7D42781165F00A76687 /* ViewControllers */ = {
-			isa = PBXGroup;
-			children = (
-				AC4A46F92754609700F5A65F /* GFAlertVC.swift */,
-				AC22C7D5278116AB00A76687 /* GFUserInfoHeaderVC.swift */,
-			);
-			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 		AC4A46FB2754617400F5A65F /* Labels */ = {
@@ -222,6 +215,9 @@
 				AC91BF6D274B30F700C537A0 /* FollowerListVC.swift */,
 				AC91BF66274B0A3200C537A0 /* FavoritesListVC.swift */,
 				AC22C7D2277EBAE700A76687 /* UserInfoVC.swift */,
+				AC4A46F92754609700F5A65F /* GFAlertVC.swift */,
+				AC22C7D5278116AB00A76687 /* GFUserInfoHeaderVC.swift */,
+				AC22C7DD2784234100A76687 /* GFItemInfoVC.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -237,7 +233,6 @@
 		AC91BF61274B070500C537A0 /* Custom Views */ = {
 			isa = PBXGroup;
 			children = (
-				AC22C7D42781165F00A76687 /* ViewControllers */,
 				AC91BF62274B070D00C537A0 /* Buttons */,
 				AC10738F27700DB0001B527A /* Cells */,
 				AC10738E27700D8E001B527A /* ContainerView */,
@@ -362,6 +357,7 @@
 				AC4A46FD275461A900F5A65F /* GFTitleLabel.swift in Sources */,
 				AC4A47012754AC0200F5A65F /* GFContainerView.swift in Sources */,
 				AC91BF48274B063100C537A0 /* AppDelegate.swift in Sources */,
+				AC22C7DE2784234100A76687 /* GFItemInfoVC.swift in Sources */,
 				ACD0903B275734F800409740 /* NetworkManager.swift in Sources */,
 				AC22C7CE2772C9C900A76687 /* UIHelper.swift in Sources */,
 				AC91BF4A274B063100C537A0 /* SceneDelegate.swift in Sources */,
