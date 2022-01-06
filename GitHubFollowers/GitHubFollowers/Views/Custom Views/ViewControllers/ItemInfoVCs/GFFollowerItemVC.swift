@@ -15,6 +15,11 @@ class GFFollowerItemVC: GFItemInfoVC {
         configureItems()
     }
     
+    //MARK: - Methods
+    override func actionButtonTapped() {
+        delegate.didTapGetFollowers(for: user)
+    }
+    
     //MARK: - UIConfiguration
     private func configureItems() {
         itemInfoViewOne.set(itemInfoType: .followers, withCount: user.followers)
