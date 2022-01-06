@@ -7,7 +7,7 @@
 
 import UIKit
 
-class GFFollowerItemInfo: GFItemInfoVC {
+class GFFollowerItemVC: GFItemInfoVC {
     
     //MARK: - Lifecycles
     override func viewDidLoad() {

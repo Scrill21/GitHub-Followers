@@ -15,11 +15,13 @@ class GFItemInfoVC: UIViewController {
     let actionButton = GFButton()
     
     var user: User!
+    weak var delegate: UserInfoVCDelegate!
     
     //MARK: - Lifecycles
     override func viewDidLoad() {
         super.viewDidLoad()
         configureBackgroundView()
+        configureActionButton()
         layoutUI()
         configureStackView()
     }
@@ -34,6 +36,11 @@ class GFItemInfoVC: UIViewController {
     }
     
     //MARK: - Methods
+    private func configureActionButton() {
+        actionButton.addTarget(self, action: #selector(actionButtonTapped), for: .touchUpInside)
+    }
+    
+    @objc func actionButtonTapped() {}
     
     //MARK: - UIConfiguration
     private func configureBackgroundView() {
