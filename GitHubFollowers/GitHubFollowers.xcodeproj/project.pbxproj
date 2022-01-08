@@ -38,6 +38,7 @@
 		AC91BF69274B13CC00C537A0 /* GFButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC91BF68274B13CC00C537A0 /* GFButton.swift */; };
 		AC91BF6B274B186A00C537A0 /* GFTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC91BF6A274B186A00C537A0 /* GFTextField.swift */; };
 		AC91BF6E274B30F700C537A0 /* FollowerListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC91BF6D274B30F700C537A0 /* FollowerListVC.swift */; };
+		ACC3F8FF278946EE00BFF414 /* PersistanceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC3F8FE278946EE00BFF414 /* PersistanceManager.swift */; };
 		ACD0903B275734F800409740 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD0903A275734F800409740 /* NetworkManager.swift */; };
 /* End PBXBuildFile section */
 
@@ -75,6 +76,7 @@
 		AC91BF68274B13CC00C537A0 /* GFButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFButton.swift; sourceTree = "<group>"; };
 		AC91BF6A274B186A00C537A0 /* GFTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFTextField.swift; sourceTree = "<group>"; };
 		AC91BF6D274B30F700C537A0 /* FollowerListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowerListVC.swift; sourceTree = "<group>"; };
+		ACC3F8FE278946EE00BFF414 /* PersistanceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistanceManager.swift; sourceTree = "<group>"; };
 		ACD0903A275734F800409740 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -253,6 +255,7 @@
 			isa = PBXGroup;
 			children = (
 				ACD0903A275734F800409740 /* NetworkManager.swift */,
+				ACC3F8FE278946EE00BFF414 /* PersistanceManager.swift */,
 			);
 			path = "Model Controllers";
 			sourceTree = "<group>";
@@ -385,6 +388,7 @@
 				AC22C7D3277EBAE700A76687 /* UserInfoVC.swift in Sources */,
 				AC4A47062755E6F000F5A65F /* Follower.swift in Sources */,
 				AC4A46FD275461A900F5A65F /* GFTitleLabel.swift in Sources */,
+				ACC3F8FF278946EE00BFF414 /* PersistanceManager.swift in Sources */,
 				AC22C7EA27855BBF00A76687 /* String+Ext.swift in Sources */,
 				AC4A47012754AC0200F5A65F /* GFContainerView.swift in Sources */,
 				AC91BF48274B063100C537A0 /* AppDelegate.swift in Sources */,
