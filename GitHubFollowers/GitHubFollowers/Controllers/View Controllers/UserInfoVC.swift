@@ -28,7 +28,12 @@ class UserInfoVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureViewController()
-        
+        layoutUI()
+        getUserInfo()
+    }
+    
+    //MARK: - Methods
+    func getUserInfo() {
         NetworkManager.shared.getUserInfo(for: username) { [weak self] result in
             guard let self = self else { return }
             
@@ -39,13 +44,6 @@ class UserInfoVC: UIViewController {
                 self.presentGFAlertOnMainThread(title: "Something went wrong", message: error.localizedDescription, buttonTitle: "Ok")
             }
         }
-        
-        layoutUI()
-    }
-    
-    //MARK: - Methods
-    @objc func dismissVC() {
-        dismiss(animated: true)
     }
     
     func configureUIElements(with user: User) {
@@ -66,6 +64,10 @@ class UserInfoVC: UIViewController {
         view.backgroundColor = .systemBackground
         let doneButton = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(dismissVC))
         navigationItem.rightBarButtonItem = doneButton
+    }
+    
+    @objc func dismissVC() {
+        dismiss(animated: true)
     }
     
     func layoutUI() {
