@@ -30,7 +30,7 @@ class GFItemInfoView: UIView {
     //MARK: - Methods
     
     
-    //MARK: - UIConfiguration
+    //MARK: - UI Configuration
     private func configure() {
         addSubview(symbolImageView)
         addSubview(titleLabel)
