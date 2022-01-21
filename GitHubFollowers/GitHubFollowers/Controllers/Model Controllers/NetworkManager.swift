@@ -46,7 +46,6 @@ class NetworkManager {
                 completion(.failure(.unableToDecode))
             }
         }
-        
         task.resume()
     }
     

@@ -13,6 +13,7 @@ enum GFError: LocalizedError {
     case noData
     case unableToDecode
     case unableToAddFavorite
+    case alreadyInFavorites
     
     var errorDescription: String? {
         switch self {
@@ -27,6 +28,8 @@ enum GFError: LocalizedError {
             return "The server responded with bad data."
         case .unableToAddFavorite:
             return "There was an error when trying to add this user to favorites. Please try again."
+        case .alreadyInFavorites:
+            return "You've already favorited this user."
         }
     }
 }
