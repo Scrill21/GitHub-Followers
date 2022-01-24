@@ -22,24 +22,22 @@ enum PersistanceManager {
     static func updateWith(favorite: Follower, actionType: PresistanceActionType, completion: @escaping (GFError?) -> Void) {
         retrieveFavorites { result in
             switch result {
-            case .success(let favorites):
-                var retrieveFavorites = favorites
-                
+            case .success(var favorites):
                 switch actionType {
                 case .add:
-                    guard !retrieveFavorites.contains(favorite) else {
+                    guard !favorites.contains(favorite) else {
                         completion(.alreadyInFavorites)
                         return
                     }
-                    retrieveFavorites.append(favorite)
+                    favorites.append(favorite)
                     
                 case .remove:
-                    retrieveFavorites.removeAll { follower in
+                    favorites.removeAll { follower in
                         follower.login == favorite.login
                     }
-                    completion(save(favorites: favorites))
                 }
-            
+                completion(save(favorites: favorites))
+                
             case .failure(let error):
                 completion(error)
             }

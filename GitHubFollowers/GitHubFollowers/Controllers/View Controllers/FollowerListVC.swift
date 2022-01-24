@@ -43,6 +43,14 @@ class FollowerListVC: UIViewController {
     }
     
     //MARK: - Methods
+    func configureViewController() {
+        view.backgroundColor = .systemBackground
+        navigationController?.navigationBar.prefersLargeTitles = true
+        
+        let addButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addButtonTapped))
+        navigationItem.rightBarButtonItem = addButton
+    }
+    
     func getFollowers(username: String, page: Int) {
         showLoadingView()
         NetworkManager.shared.getFollower(for: username, page: page) { [weak self] result in
@@ -76,17 +84,32 @@ class FollowerListVC: UIViewController {
     
     @objc func addButtonTapped() {
         print("Add button tapped")
+        showLoadingView()
+        
+        NetworkManager.shared.getUserInfo(for: username) { [weak self] result in
+            guard let self = self else { return }
+            self.dismissLoadingView()
+            
+            switch result {
+            case .success(let user):
+                let favorite = Follower(login: user.login, avatarUrl: user.avatarUrl)
+                print("Success case")
+                PersistanceManager.updateWith(favorite: favorite, actionType: .add) { error in
+                    guard let error = error else {
+                        self.presentGFAlertOnMainThread(title: "Success!", message: "You added this user to your favorites list 🎉", buttonTitle: "Ok")
+                        return
+                    }
+                    
+                    self.presentGFAlertOnMainThread(title: "Something went wrong", message: error.localizedDescription, buttonTitle: "Ok")
+                }
+            case .failure(let error):
+                print("Failure case")
+                self.presentGFAlertOnMainThread(title: "Something went wrong", message: error.localizedDescription, buttonTitle: "Ok")
+            }
+        }
     }
     
     //MARK: - UI Configuration
-    func configureViewController() {
-        view.backgroundColor = .systemBackground
-        navigationController?.navigationBar.prefersLargeTitles = true
-        
-        let addButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addButtonTapped))
-        navigationItem.rightBarButtonItem = addButton
-    }
-    
     func configureCollectionView() {
         collectionView = UICollectionView(frame: view.bounds, collectionViewLayout: UIHelper.createThreeColumnFlowLayout(in: view))
         view.addSubview(collectionView)
